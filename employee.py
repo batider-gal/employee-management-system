@@ -56,10 +56,11 @@ class Employee:
                 raise ValueError("Cannot change to lower level.")
 
             print(f"'{self.name}' promoted to '{new_level}'.")
-
+            self._level = new_level
             self.salary = Employee._base_salaries[new_level]
 
-        self._level = new_level
+        else:
+            self._level = new_level
 
     @property
     def salary(self):
